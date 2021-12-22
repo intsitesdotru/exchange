@@ -1,14 +1,14 @@
 import 'package:equatable/equatable.dart';
 
-class Currency extends Equatable {
+class DailyCurrency extends Equatable {
   final String id;
-  final DateTime date;
+  final DateTime? date;
   final String abbreviation;
   final int scale;
   final String name;
   final double rate;
 
-  const Currency({
+  const DailyCurrency({
     required this.id,
     required this.date,
     required this.abbreviation,
@@ -18,7 +18,7 @@ class Currency extends Equatable {
   });
 
   @override
-  List<Object> get props => [
+  List<Object?> get props => [
         id,
         date,
         abbreviation,
